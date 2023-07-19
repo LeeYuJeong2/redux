@@ -4,6 +4,7 @@ import { increaseCount, decreaseCount } from "../reducers/counter"
 import CounterState from "src/types/state"
 
 const Counter = () => {
+  //component
   const dispatch = useDispatch()
   const count = useSelector((state: CounterState) => state.counter.count)
 
