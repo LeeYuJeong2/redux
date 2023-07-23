@@ -1,7 +1,12 @@
-import { createStore } from "redux"
-import { composeWithDevTools } from "redux-devtools-extension"
-import rootReducer from "src/reducers"
+// /store/index.ts
+import { configureStore } from "@reduxjs/toolkit"
+import counterReducer from "../reducers/counterSlice"
 
-const store = createStore(rootReducer, composeWithDevTools())
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+})
 
-export default store
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch

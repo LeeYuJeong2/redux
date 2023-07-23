@@ -1,4 +1,4 @@
-import React from "react"
+//import React from "react"
 import Counter from "src/components/Counter"
 
 const index = () => {
